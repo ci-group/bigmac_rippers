@@ -1,8 +1,8 @@
 How to connect to a ripper(CI Group computational servers)
 
 - Create an ssh key https://phoenixnap.com/kb/ssh-with-key
-- Send the ssh public key to Aart Stuurman
-- Get an account on a ripper from Aart Stuurman
+- Send the ssh public key to Ting-Chia(Karen) Chiang
+- Get an account on a ripper from Ting-Chia(Karen) Chiang
 - Add the following file contents to ~/.ssh/config. Fill in your own ripper username:
 ```
 AddKeysToAgent yes
