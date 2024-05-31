@@ -19,41 +19,6 @@ Port 22
 User <your_ripper_user>
 ProxyJump bigmac
 
-Host ripper2
-Hostname 10.0.0.2
-Port 22
-User <your_ripper_user>
-ProxyJump bigmac
-
-Host ripper3
-Hostname 10.0.0.3
-Port 22
-User <your_ripper_user>
-ProxyJump bigmac
-
-Host ripper4
-Hostname 10.0.0.4
-Port 22
-User <your_ripper_user>
-ProxyJump bigmac
-
-Host ripper5
-Hostname 10.0.0.5
-Port 22
-User <your_ripper_user>
-ProxyJump bigmac
-
-Host ripper6
-Hostname 10.0.0.6
-Port 22
-User <your_ripper_user>
-ProxyJump bigmac
-
-Host ripper7
-Hostname 10.0.0.7
-Port 22
-User <your_ripper_user>
-ProxyJump bigmac
 ```
 
 - you can now log into your ripper using `ssh ripper#`
