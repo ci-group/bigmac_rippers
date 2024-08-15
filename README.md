@@ -13,8 +13,8 @@ Port 22
 User hopper
 ServerAliveInterval 10
 
-Host ripper1
-Hostname 10.0.0.1
+Host ripper#
+Hostname 10.0.0.#
 Port 22
 User <your_ripper_user>
 ProxyJump bigmac
