@@ -142,8 +142,8 @@ We have the following folders accessible for you:
 
 | Path            | Size Limit | Permanent | Note                                                                                         |
 |-----------------|------|-----------|----------------------------------------------------------------------------------------------|
-| /home/<user>    | 50G  | Yes       | Your home folder. Size limit is 50G by default.                                              |
-| /scratch/<user> | 200G | Yes       | Your scratch folder. Larger in size than home.                                               |
+| /home/user_name    | 50G  | Yes       | Your home folder. Size limit is 50G by default.                                              |
+| /scratch/user_name | 200G | Yes       | Your scratch folder. Larger in size than home.                                               |
 | /tmp            |  -   | No        | This folder is available to your job on each node. Data will be lost after the job finishes. |
 
 The `\tmp` folder is special: Once your job or task is assigned to one of the nodes, a special `/tmp` folder will be generated for you on this node. Unlike the home and scratch folder, the tmp folder is local to the node. This may be an advantage if you need a lot of file i/o processes (ie accessing or writing data) as it reduces the network load and is faster. However, remember to move or copy any data you want to keep over to either scratch or home, as the tmp folder will be deleted after your job finishes and all data in it will be lost.
