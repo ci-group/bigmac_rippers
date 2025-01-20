@@ -140,7 +140,7 @@ You can find a good guide on how to use Conda [here](https://docs.conda.io/proje
 By default, your home folder `/home/<your_hex_username>` is shared among all the nodes, this means if you create/add data here, your Slurm jobs will also have access to it.
 We have the following folders accessible for you:
 
-| Path            | Size | Permanent | Note                                                                                         |
+| Path            | Size Limit | Permanent | Note                                                                                         |
 |-----------------|------|-----------|----------------------------------------------------------------------------------------------|
 | /home/<user>    | 50G  | Yes       | Your home folder. Size limit is 50G by default.                                              |
 | /scratch/<user> | 200G | Yes       | Your scratch folder. Larger in size than home.                                               |
