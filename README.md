@@ -147,3 +147,34 @@ We have the following folders accessible for you:
 | /tmp            |  -   | No        | This folder is available to your job on each node. Data will be lost after the job finishes. |
 
 The `\tmp` folder is special: Once your job or task is assigned to one of the nodes, a special `/tmp` folder will be generated for you on this node. Unlike the home and scratch folder, the tmp folder is local to the node. This may be an advantage if you need a lot of file i/o processes (ie accessing or writing data) as it reduces the network load and is faster. However, remember to move or copy any data you want to keep over to either scratch or home, as the tmp folder will be deleted after your job finishes and all data in it will be lost.
+
+## Environment modules
+Note: Main documentation found here: https://modules.readthedocs.io/en/latest/index.html
+ 
+When working on a SLURM-based High-Performance Computing (HPC) cluster, you'll often need specific software packages or libraries for your tasks. These clusters typically have multiple users and a variety of software environments. Using Modules helps manage these environments by allowing users to dynamically load, unload, and switch between software versions without conflicts.
+
+The Environment **Modules** or **Lmod** system is commonly used for this purpose. Modules modify your environment variables, such as `PATH`, `LD_LIBRARY_PATH`, and `MANPATH`, to ensure you can seamlessly use specific software without manually altering your configuration files. Why use Modules:
+
+- Version Control: Easily load different versions of the same software.
+
+- Conflict Avoidance: Avoid conflicts between libraries and dependencies.
+
+- Convenience: Load preconfigured environments for software with a single command.
+
+- Cluster-Wide Accessibility: Consistently access software across all nodes of the cluster.
+
+Useful commands:
+
+- module avail - Displays all the modules available on the cluster
+
+- module spider <module_name> - Find a module by name or part of its name
+
+- module load <module_name> - Add a module to your environment
+
+- module unload - Remove a module from your environment
+
+- module list - Show all modules currently loaded in your session
+
+- module purge - Unload all currently loaded modules
+
+**Note**: If you find a specific package you want to use is not listed in `module avail`, contact Karen.
