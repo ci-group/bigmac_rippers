@@ -165,16 +165,16 @@ The Environment **Modules** or **Lmod** system is commonly used for this purpose
 
 Useful commands:
 
-- module avail - Displays all the modules available on the cluster
+- `module avail` - Displays all the modules available on the cluster
 
-- module spider <module_name> - Find a module by name or part of its name
+- `module spider <module_name>` - Find a module by name or part of its name
 
-- module load <module_name> - Add a module to your environment
+- `module load <module_name>` - Add a module to your environment
 
-- module unload - Remove a module from your environment
+- `module unload` - Remove a module from your environment
 
-- module list - Show all modules currently loaded in your session
+- `module list` - Show all modules currently loaded in your session
 
-- module purge - Unload all currently loaded modules
+- `module purge` - Unload all currently loaded modules
 
 **Note**: If you find a specific package you want to use is not listed in `module avail`, contact Karen.
