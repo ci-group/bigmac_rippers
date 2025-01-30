@@ -29,7 +29,9 @@ Hostname 10.0.0.1
 Port 22
 User <your_hex_username>
 ProxyJump bigmac
-
+```
+Add the following if you are granted access to an individual ripper.
+```
 Host ripper#
 Hostname 10.0.0.#
 Port 22
