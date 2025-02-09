@@ -124,8 +124,10 @@ The follwong partitions are available:
 | batch     | 4 days    | CPUs        | Ripper 2-7     | Staff,Students  | Standard job queue for all jobs which require CPUs                                                       |
 | short     | 2 hours   | CPUs        | Ripper 1-7     | Staff, Students | For very short jobs, or for testing setups. Has a higher priority than batch.                            |
 | batch-gpu | 2 days    | CPUs + GPUs | Ripper 2-7,12  | Staff, Students | GPU partition for students. You can only request 5 CPUs per GPU.                                         |
+| long      | 28 days   | CPUs        | Ripper 2-7     | Staff, Students | For very long jobs up to 28 days. Partition uses at most 50% of cluster ressources.                      |
 | gpu       | 4 days    | CPUs + GPUs | Ripper 2-7, 12 | Staff           | Priority queue for GPU jobs. You can only request 5 CPUs per GPU, and you need to be in the group staff. |
 | gpu-short | 2 hours   | CPUs + GPUs | Ripper 2-7, 12 | Staff           | For very short GPU jobs or testing setups. Has a higher priority than gpu, but same restrictions.        |
+| gpu-long  | 28 days   | CPUs + GPUs | Ripper 2-7, 12 | Staff           | For very long GPU jobs up to 28 days. Partion uses at most 4 GPUs.                                       |
 
 Some partitions are only accessible to staff memebers by default. If you need exceptions, discuss them with your supervisor and Kevin.
 
@@ -144,11 +146,14 @@ We have the following folders accessible for you:
 
 | Path            | Size Limit | Permanent | Note                                                                                         |
 |-----------------|------|-----------|----------------------------------------------------------------------------------------------|
-| /home/user_name    | 50G  | Yes       | Your home folder. Size limit is 50G by default.                                              |
+| /home/user_name    | 60G  | Yes       | Your home folder. Size limit is 50G by default.                                              |
 | /scratch/user_name | 200G | Yes       | Your scratch folder. Larger in size than home.                                               |
 | /tmp            |  -   | No        | This folder is available to your job on each node. Data will be lost after the job finishes. |
 
 The `\tmp` folder is special: Once your job or task is assigned to one of the nodes, a special `/tmp` folder will be generated for you on this node. Unlike the home and scratch folder, the tmp folder is local to the node. This may be an advantage if you need a lot of file i/o processes (ie accessing or writing data) as it reduces the network load and is faster. However, remember to move or copy any data you want to keep over to either scratch or home, as the tmp folder will be deleted after your job finishes and all data in it will be lost.
+
+## File System Usage limits
+To ensure a fair use of the system and prevent issues, you can only use at most the size limit mentioned in the table above. If you go over the limit, you have a grace period of up to 7 days to decrease the size of your folder. Please make use of the scratch folder, where we hae 4TB in total available!
 
 ## Environment modules
 Note: Main documentation found here: https://modules.readthedocs.io/en/latest/index.html
